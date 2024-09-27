@@ -7,58 +7,43 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "Next Portfolio Website",
+    description: "The website features a portfolio showcasing various design and development projects.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/devolopering/portifolio.git",
+    previewUrl: "https://portifolio-taupe-five-81.vercel.app/",
   },
+
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    title: "E-commerce Application",
+    description: "The website is an online platform specifically designed for purchasing headphones.",
+    image: "/images/projects/products.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/devolopering/exam-7-oy.git",
+    previewUrl: "https://exam-7-oy-iuk6.vercel.app/",
   },
+
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
+    title: "Js Admin panel",
+    description: "Product management platform",
+    image: "/images/projects/admin-3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/devolopering/exam_06.git",
+    previewUrl: "https://exam-06.vercel.app/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
+    title: "React Crypto Currency Exchange",
+    description: "Crypto Currency Exchange platform",
+    image: "/images/projects/crypto.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/devolopering/exam--8-oy.git",
+    previewUrl: "https://exam-8-oy.vercel.app/",
   },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+  
 ];
 
 const ProjectsSection = () => {
@@ -95,11 +80,12 @@ const ProjectsSection = () => {
           name="Web"
           isSelected={tag === "Web"}
         />
-        <ProjectTag
+             <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Mobil"
+          isSelected={tag === "Mobil"}
         />
+  
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
